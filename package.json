@@ -1,0 +1,14 @@
+{
+  "name": "lpayment",
+  "version": "1.0.0",
+  "description": "confirmação de pagamento via whatsapp",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm start index.js"
+  },
+  "keywords": [
+    "whatsapp"
+  ],
+  "author": "Luan",
+  "license": "ISC"
+}

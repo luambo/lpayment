@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Pagamento</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <form id="payment-form">
+        <h1>Formulário de Pagamento</h1>
+        <label for="name">Nome completo:</label><p>
+        <input type="text" id="name" name="name" required>
+        <p>
+            <label for="modality">Modalidade:</label><p>
+            <select required id="modality" name="modality" onchange="updateValue()">
+                <option value="" selected disabled>Selecione</option>
+                <option value="ballet">Ballet</option>
+                <option value="jazz">Jazz</option>
+                <option value="salao">Dança de Salão</option>
+            </select>
+        <p>
+
+        <p id="payment-amount" style="display:none;">Valor: R$<span id="display-amount">60.00</span></p>
+        <p id="pix-estabelecimento" style="display:none;">Chave PIX:<span id="pix">"NUMERO PIX"</span></p>
+
+        <p id="extra-info" style="display:none;">Somente pressione o botão abaixo após concluir o pagamento</p>
+    
+        <button type="submit" id = "pay-btn" style="display:none;">Paguei</button><p>
+    </form>
+
+    <script src="/js/script.js"></script>
+</body>
+
+<!-- <footer id="foot">
+    LPayment©
+</footer> -->
+</html>
