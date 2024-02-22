@@ -22,19 +22,34 @@ function updateValue() {
     }        
     document.getElementById("amount").textContent = amount.toFixed(2);
 }
+function copyPix(){
+    const element = document.getElementById('pix');
+    const innerText = element.innerText;
 
-// Função de envio do formulário 
-document.getElementById("payment-form").addEventListener("submit", function (event) {
-    event.preventDefault();
-    var name = document.getElementById("name").value;
-    var modality = document.getElementById("modality").value;
-    var message = `**Pagamento de mensalidade**
+    navigator.clipboard.writeText(innerText)
+        .then(() => {
+            alert("Pix Copiado", + innerText);
+        })
+        .catch(err => {
+            console.error("Não foi possível copiar", err);
+        })
+}
+
+
+// Função de envio do formulário
+function submitWhats() {
+    document.getElementById("payment-form").addEventListener("submit", function (event) {
+        event.preventDefault();
+        var name = document.getElementById("name").value;
+        var modality = document.getElementById("modality").value;
+        var message = `**Pagamento de mensalidade**
 Nome completo: ${name}
 
 Modalidade: *${modality}*
 
 *Comprovante: a enviar...*`;
 
-    var whatsappLink = `https://wa.me/55${number}?text=${encodeURIComponent(message)}`;
-    window.location.href= whatsappLink;
-});
+        var whatsappLink = `https://wa.me/55${number}?text=${encodeURIComponent(message)}`;
+        window.location.href = whatsappLink;
+    })
+};

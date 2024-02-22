@@ -26,12 +26,20 @@
             </select>
         <p>
 
-        <p id="payment-amount" style="display:none;">Valor: R$<span id="display-amount">60.00</span></p>
-        <p id="pix-estabelecimento" style="display:none;">Chave PIX:<span id="pix">"NUMERO PIX"</span></p>
+        <p id="payment-amount" style="display:none;">Valor: R$<span id="display-amount">60.00</span>
+        </p>
+        <p id="pix-estabelecimento" style="display:none;">
+            Chave PIX:
+            <span id="pix" class="copy-text">
+                "NUMERO PIX"</span>
+            <button type="button" onclick="copyPix()">
+                <i class="fa fa-clone">Copiar pix</i>
+            </button>
+        </p> 
 
         <p id="extra-info" style="display:none;">Somente pressione o botão abaixo após concluir o pagamento</p>
     
-        <button type="submit" id = "pay-btn" style="display:none;">Paguei</button><p>
+        <button type="submit" id = "pay-btn" style="display:none;" onclick="submitWhats()">Paguei</button><p>
     </form>
 
     <script src="./js/script.js"></script>

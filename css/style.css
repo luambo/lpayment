@@ -1,3 +1,4 @@
+
 body {
     font-family: Arial, sans-serif;
     font-weight:600;
@@ -56,6 +57,21 @@ button[type="submit"] {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+button[type="submit"]:active {
+    background-color: #8ebdee;
+}
+#pix-estabelecimento button {
+    margin-left:10px;
+    padding: 6px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius:5px;
+    cursor: pointer;
+}
+#pix-estabelecimento button:active{
+    background: #8ebdee;
 }
 /* responsivo */
 @media screen and (max-width: 600px) {
