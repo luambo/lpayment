@@ -67,7 +67,7 @@ Nome completo: ${name}
 
 Modalidade: *${modalidades}*
 
-Valor: *${valor}*
+Valor: *R$${valor}*
 
 *Comprovante: a enviar...*`;
 
