@@ -2,7 +2,7 @@
 
 const defaultAmount = 60;
 const amountSalao = 70;
-const number = 21983619249;
+const number = 21982126193;
 const desconto = 10;
 
 function updateValue() {
