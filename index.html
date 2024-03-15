@@ -13,36 +13,53 @@
 
 <body>
     <form id="payment-form">
-        <h1>Formulário de Pagamento</h1>
-        <label for="name">Nome completo:</label><p>
+        <h1>Pagamento Espaço Futurart</h1>
+        <label for="name">Nome completo:</label><p></p>
         <input type="text" id="name" name="name" required>
-        <p>
-            <label for="modality">Modalidade:</label><p>
-            <select required id="modality" name="modality" onchange="updateValue()">
-                <option value="" selected disabled>Selecione</option>
-                <option value="ballet">Ballet</option>
-                <option value="jazz">Jazz</option>
-                <option value="salao">Dança de Salão</option>
-            </select>
-        <p>
+        <p></p>
+            <label for="modalities">Selecione suas Modalidades:</label><p></p>
+                Manhã:<p></p>
+                <input type="checkbox" id="zumba-seg-qua" name="modalities[]" value="zumba-seg-qua" onchange="updateValue()">
+                <label for="zumba-seg-qua">Zumba - Seg e Qua</label><br>
+                <input type="checkbox" id="contemporaneo" name="modalities[]" value="contemporaneo" onchange="updateValue()">
+                <label for="contemporaneo">Contemporâneo</label><p></p>
+                Noite:<p></p>
+                <input type="checkbox" id="salao" name="modalities[]" value="salao" onchange="updateValue()">
+                <label for="salao">Dança de Salão</label><br>
+                <input type="checkbox" id="hip-hop" name="modalities[]" value="hip-hop" onchange="updateValue()">
+                <label for="hip-hop">Hip-Hop</label><br>
+                <input type="checkbox" id="baby-class" name="modalities[]" value="baby-class" onchange="updateValue()">
+                <label for="baby-class">Ballet Baby Class</label><br>
+                <input type="checkbox" id="juvenil" name="modalities[]" value="juvenil" onchange="updateValue()">
+                <label for="juvenil">Ballet Infantil Juvenil</label><br>
+                <input type="checkbox" id="jazz" name="modalities[]" value="jazz" onchange="updateValue()">
+                <label for="jazz">Jazz</label><br>
+                <input type="checkbox" id="ventre-adulto" name="modalities[]" value="ventre-adulto" onchange="updateValue()">
+                <label for="ventre-adulto">Dança do Ventre - Adulto</label><br>
+                <input type="checkbox" id="ventre-infantil" name="modalities[]" value="ventre-infantil" onchange="updateValue()">
+                <label for="ventre-infantil">Dança do Ventre - Infantil</label><br>
+                <input type="checkbox" id="kpop" name="modalities[]" value="kpop" onchange="updateValue()">
+                <label for="kpop">K-Pop</label><p></p>
+<!-- teste acima -->
 
-        <p id="payment-amount" style="display:none;">Valor: R$<span id="display-amount">60.00</span>
+        <p id="payment-amount" style="display:none;">Valor: R$<span id="display-amount">0.00</span>
         </p>
         <p id="pix-estabelecimento" style="display:none;">
-            Chave PIX:
+            Chave PIX do tipo e-mail:<br><br>
             <span id="pix" class="copy-text">
-                "NUMERO PIX"</span>
+                espaco.futurart@hotmail.com</span>
             <button type="button" onclick="copyPix()">
                 <i class="fa fa-clone">Copiar pix</i>
             </button>
         </p> 
 
-        <p id="extra-info" style="display:none;">Somente pressione o botão abaixo após concluir o pagamento</p>
+        <p id="extra-info" style="display:none;">Desconto de duas ou mais modalidades já aplicado no total.
+            <br>Somente pressione o botão abaixo após concluir o pagamento.</p>
     
         <button type="submit" id = "pay-btn" style="display:none;" onclick="submitWhats()">Paguei</button><p>
     </form>
 
-    <script src="./js/script.js"></script>
+    <script src="./js/escripto.js"></script>
 </body>
 
 <!-- 

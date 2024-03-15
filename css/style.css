@@ -2,7 +2,6 @@
 body {
     font-family: Arial, sans-serif;
     font-weight:600;
-    background: rgb(2,0,36);
     background: linear-gradient(207deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 0%, rgba(27,99,245,1) 82%); 
     margin: 0;
     padding: 0;
