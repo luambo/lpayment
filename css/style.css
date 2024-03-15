@@ -37,7 +37,15 @@ select {
     border-radius: 5px;
     box-sizing: border-box;
 }
-
+input[type="checkbox"] {
+  -ms-transform: scale(1.5); /* IE */
+  -moz-transform: scale(1.5); /* FF */
+  -webkit-transform: scale(1.5); /* Safari and Chrome */
+  -o-transform: scale(1.5); /* Opera */
+  transform: scale(1.5);
+  margin: 5px;
+  width: 10%;
+}
 #payment-amount,
 #pix-estabelecimento,
 #extra-info {
